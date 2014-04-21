@@ -23,7 +23,7 @@ public class ZombiePlugin extends Plugin {
         this.playerManager.uninitialize();
         this.zombieList.clear();
     }
-
+ 
     public WeakHashMap<SampObject, Zombie> getZombieList() {
         return zombieList;
     }
