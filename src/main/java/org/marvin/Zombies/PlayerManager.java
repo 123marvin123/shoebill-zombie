@@ -34,7 +34,7 @@ public class PlayerManager {
                 }
             }
         });
-        
+         
         this.checker = Timer.create(2000, (e) -> {
             for(Player player : Player.getHumans()) {
                 plugin.getZombieList().forEach((sampObject, zombie) -> {
