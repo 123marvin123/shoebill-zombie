@@ -17,7 +17,7 @@ public class Zombie implements Destroyable {
     public Zombie(Location loc) {
         this.health = 100.0f;
         this.location = loc;
-        this.object = SampObject.create(0, loc, new Vector3D());
+        this.object = SampObject.create(1518, loc, new Vector3D());
     }
 
     public SampObject getObject() {
