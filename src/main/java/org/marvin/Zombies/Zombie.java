@@ -12,12 +12,10 @@ import net.gtaun.shoebill.object.SampObject;
 public class Zombie implements Destroyable {
     private float health;
     private SampObject object;
-    private Location location;
     private Player currentAttackingPlayer;
     public Zombie(Location loc) {
         this.health = 100.0f;
-        this.location = loc;
-        this.object = SampObject.create(1518, loc, new Vector3D());
+        this.object = SampObject.create(2693, loc, new Vector3D());
     }
 
     public SampObject getObject() {
@@ -33,8 +31,9 @@ public class Zombie implements Destroyable {
     }
 
     public Location getLocation() {
-        return location;
+        return object.getLocation();
     }
+
     public void moveToLocation(Location loc, int speed) {
         if(!this.object.isDestroyed())
             this.object.move(new Vector3D(loc), speed);

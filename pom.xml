@@ -21,30 +21,7 @@
                 <updatePolicy>always</updatePolicy>
             </snapshots>
         </repository>
-
-        <repository>
-            <id>sonatype-nexus-snapshots</id>
-            <name>Sonatype Nexus Snapshots</name>
-            <url>https://oss.sonatype.org/content/repositories/snapshots/</url>
-            <snapshots>
-                <enabled>true</enabled>
-                <updatePolicy>always</updatePolicy>
-            </snapshots>
-        </repository>
     </repositories>
-
-    <distributionManagement>
-        <repository>
-            <id>gtaun-repo-releases</id>
-            <name>GTAUN Release Repository</name>
-            <url>http://repo.gtaun.net/content/repositories/releases</url>
-        </repository>
-        <snapshotRepository>
-            <id>gtaun-repo-snapshots</id>
-            <name>GTAUN Snapshot Repository</name>
-            <url>http://repo.gtaun.net/content/repositories/snapshots</url>
-        </snapshotRepository>
-    </distributionManagement>
 
     <dependencies>
         <dependency>
@@ -54,29 +31,7 @@
             <type>jar</type>
             <scope>compile</scope>
         </dependency>
-
-        <dependency>
-            <groupId>net.gtaun.wl</groupId>
-            <artifactId>wl-language</artifactId>
-            <version>1.0-SNAPSHOT</version>
-            <type>jar</type>
-            <scope>compile</scope>
-        </dependency>
-
-        <dependency>
-            <groupId>net.gtaun</groupId>
-            <artifactId>shoebill-common</artifactId>
-            <version>1.0-SNAPSHOT</version>
-            <type>jar</type>
-            <scope>compile</scope>
-        </dependency>
-
-        <dependency>
-            <groupId>mysql</groupId>
-            <artifactId>mysql-connector-java</artifactId>
-            <version>5.1.30</version>
-        </dependency>
-    </dependencies>
+     </dependencies>
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>

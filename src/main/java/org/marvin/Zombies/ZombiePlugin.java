@@ -1,6 +1,8 @@
 package org.marvin.Zombies;
 
 import net.gtaun.shoebill.data.Location;
+import net.gtaun.shoebill.data.Vector3D;
+import net.gtaun.shoebill.object.Player;
 import net.gtaun.shoebill.object.SampObject;
 import net.gtaun.shoebill.resource.Plugin;
 
@@ -16,12 +18,14 @@ public class ZombiePlugin extends Plugin {
     protected void onEnable() throws Throwable {
         this.playerManager = new PlayerManager(this);
         this.zombieList = new WeakHashMap<>();
+        getLogger().info("Zombie Plugin Loaded!");
     }
 
     @Override
     protected void onDisable() throws Throwable {
         this.playerManager.uninitialize();
         this.zombieList.clear();
+        getLogger().info("Zombie Plugin Unloaded!");
     }
 
     public WeakHashMap<SampObject, Zombie> getZombieList() {
@@ -29,6 +33,8 @@ public class ZombiePlugin extends Plugin {
     }
 
     public Zombie createZombie(Location loc) {
-        return new Zombie(loc);
+        Zombie zombie = new Zombie(loc);
+        zombieList.put(zombie.getObject(), zombie);
+        return zombie;
     }
 }
