@@ -1,13 +1,10 @@
 package org.marvin.Zombies;
 
 import net.gtaun.shoebill.constant.BulletHitType;
-import net.gtaun.shoebill.data.Location;
 import net.gtaun.shoebill.data.Vector3D;
-import net.gtaun.shoebill.event.object.ObjectMovedEvent;
 import net.gtaun.shoebill.event.player.PlayerWeaponShotEvent;
 import net.gtaun.shoebill.object.Player;
 import net.gtaun.shoebill.object.Timer;
-import net.gtaun.util.event.EventHandler;
 import net.gtaun.util.event.EventManagerNode;
 import org.marvin.Zombies.events.ZombieDeathEvent;
 import org.marvin.Zombies.events.ZombieTakeDamageEvent;
