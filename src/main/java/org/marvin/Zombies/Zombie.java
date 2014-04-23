@@ -18,6 +18,7 @@ public class Zombie implements Destroyable {
         this.object = SampObject.create(2693, loc, new Vector3D());
     }
 
+	
     public SampObject getObject() {
         return object;
     }
